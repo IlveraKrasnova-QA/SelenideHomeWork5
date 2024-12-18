@@ -18,9 +18,9 @@ public class DragAndDropJUnitTest {
     @Test
     void successfulDragAndDropJUnitTest() {
         open("/drag_and_drop");
-        $("#column-a").dragAndDrop(DragAndDropOptions.to("#column-b"));
-        $("#column-a").shouldHave(text("B"));
-        $("#column-b").shouldHave(text("A"));
+        $("[id=column-a]").dragAndDrop(DragAndDropOptions.to("[id=column-b]"));
+        $("[id=column-a]").shouldHave(text("B"));
+        $("[id=column-b]").shouldHave(text("A"));
 
     }
 }
